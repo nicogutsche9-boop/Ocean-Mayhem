@@ -16,8 +16,14 @@ const initialPlayers: Player[] = [
     host: true,
   },
 ];
+type LobbyProps = {
+  playerName?: string;
+};
 
-export default function Lobby() {
+export default function Lobby({
+  playerName = "Captain",
+}: LobbyProps) 
+
   const [players, setPlayers] = useState<Player[]>(initialPlayers);
   const [copied, setCopied] = useState(false);
 
