@@ -20,24 +20,14 @@ type LobbyProps = {
   playerName?: string;
 };
 
-export default function Lobby({
-  playerName = "Captain",
-}: LobbyProps) 
-
-  const [players, setPlayers] = useState<Player[]>(initialPlayers);
-  const [copied, setCopied] = useState(false);
-
-  const lobbyCode = "OCEAN-7X4";
-
-  const toggleReady = () => {
-    setPlayers((current) =>
-      current.map((player) =>
-        player.id === 1
-          ? { ...player, ready: !player.ready }
-          : player
-      )
-    );
-  };
+const createInitialPlayers = (name: string): Player[] => [
+  {
+    id: 1,
+    name,
+    ready: false,
+    host: name === "Captain",
+  },
+];
 
   const copyCode = async () => {
     try {
