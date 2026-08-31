@@ -266,3 +266,270 @@
   right: -200px;
   bottom: 10%;
 }
+/* ================================
+   OCEAN MAYHEM MAIN MENU
+   ================================ */
+
+.app-menu {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(0, 180, 255, 0.12),
+      transparent 35%
+    ),
+    #020914;
+  color: #eef8ff;
+}
+
+.menu-content {
+  width: min(520px, calc(100% - 40px));
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.menu-eyebrow {
+  margin: 0 0 12px;
+  color: #20d9ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.menu-title {
+  margin: 0;
+  font-size: clamp(42px, 8vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  font-weight: 900;
+}
+
+.menu-title span {
+  color: #ff2998;
+  text-shadow: 0 0 25px rgba(255, 41, 152, 0.35);
+}
+
+.menu-subtitle {
+  margin: 22px 0 35px;
+  color: #9eb6c8;
+  font-size: 16px;
+}
+
+.menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.menu-button {
+  width: 100%;
+  min-height: 58px;
+  border: 1px solid rgba(32, 217, 255, 0.35);
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transition: 0.2s ease;
+}
+
+.menu-button span {
+  margin-right: 10px;
+}
+
+.menu-button.primary {
+  background: linear-gradient(
+    135deg,
+    #087fa8,
+    #06bfe8
+  );
+  box-shadow:
+    0 0 25px rgba(0, 195, 255, 0.18),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.menu-button.secondary {
+  background: rgba(5, 25, 39, 0.8);
+}
+
+.menu-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 30px rgba(32, 217, 255, 0.25);
+}
+
+.menu-button:active {
+  transform: translateY(0);
+}
+
+/* JOIN */
+
+.join-card {
+  padding: 28px;
+  text-align: left;
+  border: 1px solid rgba(32, 217, 255, 0.2);
+  border-radius: 18px;
+  background: rgba(3, 18, 30, 0.88);
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(0, 180, 255, 0.08);
+  backdrop-filter: blur(15px);
+}
+
+.join-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.join-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(0, 205, 255, 0.1);
+  border: 1px solid rgba(0, 205, 255, 0.25);
+  font-size: 22px;
+}
+
+.join-header h2 {
+  margin: 2px 0 0;
+  font-size: 25px;
+}
+
+.card-label {
+  margin: 0;
+  color: #20d9ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.join-card label {
+  display: block;
+  margin-bottom: 17px;
+  color: #a9c1d0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.join-card input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding: 14px;
+  border: 1px solid rgba(100, 180, 210, 0.2);
+  border-radius: 9px;
+  outline: none;
+  background: rgba(0, 10, 20, 0.75);
+  color: white;
+  font-size: 15px;
+}
+
+.join-card input:focus {
+  border-color: #20d9ff;
+  box-shadow: 0 0 15px rgba(32, 217, 255, 0.12);
+}
+
+.join-error {
+  margin: 10px 0 15px;
+  padding: 11px;
+  border-radius: 8px;
+  background: rgba(255, 50, 100, 0.08);
+  border: 1px solid rgba(255, 50, 100, 0.25);
+  color: #ff719e;
+  font-size: 13px;
+}
+
+.join-button {
+  margin-top: 8px;
+}
+
+.back-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border: 0;
+  background: transparent;
+  color: #7893a4;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.back-button:hover {
+  color: white;
+}
+
+.menu-status {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #718b9b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.menu-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #19e7ff;
+  box-shadow: 0 0 12px #19e7ff;
+}
+
+/* OCEAN BACKGROUND */
+
+.menu-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(
+      rgba(0, 180, 255, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 180, 255, 0.12) 1px,
+      transparent 1px
+    );
+  background-size: 55px 55px;
+  transform: perspective(500px) rotateX(55deg)
+    scale(1.5);
+  transform-origin: center bottom;
+}
+
+.menu-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+}
+
+.menu-glow-one {
+  background: #00cfff;
+  left: -200px;
+  top: 20%;
+}
+
+.menu-glow-two {
+  background: #ff2998;
+  right: -200px;
+  bottom: 10%;
+}
